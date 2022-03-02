@@ -1,19 +1,19 @@
 import React,{createContext, useState} from "react";
 
-export const tareasContext = createContext();
+export const TareasContext = createContext();
 
 const TareasProvider = (props) => {
-    const [tareas, guardarTareas] = useState({});
+    const [tareas, guardarTareas] = useState([]);
 
     return (
-        <tareasContext.Provider
+        <TareasContext.Provider
             value = {{
                 tareas,
                 guardarTareas
             }}
         >
             {props.children}
-        </tareasContext.Provider>
+        </TareasContext.Provider>
     )
 }
 
